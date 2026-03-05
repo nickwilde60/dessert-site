@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PADHARO SA</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background-color: #fff5f5;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 300px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: pink;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Build Your Dessert 🍨</h2>
+
+        <p><b>Select Base:</b></p>
+        <select id="base">
+            <option value="Cake">Cake</option>
+            <option value="Brownie">Brownie</option>
+        </select>
+
+        <p><b>Select Topping:</b></p>
+        <select id="topping">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Strawberry">Strawberry</option>
+        </select>
+
+        <p><b>Select Size:</b></p>
+        <select id="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+
+        <button onclick="showOrder()">Review Order</button>
+
+        <p id="result"></p>
+    </div>
+
+<script>
+function showOrder() {
+    let base = document.getElementById("base").value;
+    let topping = document.getElementById("topping").value;
+    let size = document.getElementById("size").value;
+
+    document.getElementById("result").innerHTML =
+        "You selected: " + size + " " + base + " with " + topping + " topping.";
+}
+</script>
+
+</body>
+</html>
